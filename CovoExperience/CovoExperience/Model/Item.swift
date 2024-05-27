@@ -8,11 +8,15 @@
 import Foundation
 import SwiftData
 
-@Model
-final class Item {
-    var timestamp: Date
-    
-    init(timestamp: Date) {
-        self.timestamp = timestamp
-    }
+struct Persona: Identifiable, Codable {
+    var id = UUID()
+    var nome: String
+    var soldi: Double
 }
+
+struct Serata: Identifiable, Codable {
+    var id = UUID()
+    var data: Date
+    var persone: [Persona]
+}
+

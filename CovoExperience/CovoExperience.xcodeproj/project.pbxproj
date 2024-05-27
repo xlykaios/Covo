@@ -12,6 +12,8 @@
 		0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0D2C04D02C00B9211A /* Item.swift */; };
 		0C1FDC102C04D02D00B9211A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */; };
 		0C1FDC132C04D02D00B9211A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */; };
+		0E00D7612C04D4E8001480AC /* ContiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E00D7602C04D4E8001480AC /* ContiViewModel.swift */; };
+		0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E00D7622C04D510001480AC /* AggiungiSerataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		0C1FDC0D2C04D02C00B9211A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E00D7602C04D4E8001480AC /* ContiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiViewModel.swift; sourceTree = "<group>"; };
+		0E00D7622C04D510001480AC /* AggiungiSerataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiungiSerataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		0E00D75F2C04D2CA001480AC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0E00D7602C04D4E8001480AC /* ContiViewModel.swift */,
+				0E00D7622C04D510001480AC /* AggiungiSerataView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E00D7612C04D4E8001480AC /* ContiViewModel.swift in Sources */,
+				0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */,
 				0C1FDC0C2C04D02C00B9211A /* ContentView.swift in Sources */,
 				0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */,
 				0C1FDC0A2C04D02C00B9211A /* CovoExperienceApp.swift in Sources */,
