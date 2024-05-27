@@ -26,7 +26,6 @@ struct ContentView: View {
             }
             .navigationTitle("Conti")
             .navigationBarItems(
-                leading: EditButton(),
                 trailing: NavigationLink("Aggiungi Serata", destination: AggiungiSerataView(viewModel: viewModel))
             )
         }
@@ -39,3 +38,6 @@ private let dateFormatter: DateFormatter = {
     return formatter
 }()
 
+#Preview {
+    ContentView()
+}
