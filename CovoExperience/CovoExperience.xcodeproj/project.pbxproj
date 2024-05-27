@@ -53,9 +53,10 @@
 		0C1FDC082C04D02C00B9211A /* CovoExperience */ = {
 			isa = PBXGroup;
 			children = (
+				0E00D75D2C04D2B8001480AC /* Model */,
+				0E00D75E2C04D2C5001480AC /* View */,
+				0E00D75F2C04D2CA001480AC /* ViewModel */,
 				0C1FDC092C04D02C00B9211A /* CovoExperienceApp.swift */,
-				0C1FDC0B2C04D02C00B9211A /* ContentView.swift */,
-				0C1FDC0D2C04D02C00B9211A /* Item.swift */,
 				0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */,
 				0C1FDC112C04D02D00B9211A /* Preview Content */,
 			);
@@ -68,6 +69,29 @@
 				0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0E00D75D2C04D2B8001480AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C1FDC0D2C04D02C00B9211A /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E00D75E2C04D2C5001480AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C1FDC0B2C04D02C00B9211A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E00D75F2C04D2CA001480AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
