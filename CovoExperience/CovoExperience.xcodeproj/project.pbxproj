@@ -18,7 +18,7 @@
 		0EAF1F532C075F4300D3CEFC /* conti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F522C075F4300D3CEFC /* conti.swift */; };
 		0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F542C075F5500D3CEFC /* storico.swift */; };
 		0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F562C075F8000D3CEFC /* impostazioni.swift */; };
-		0EC3DFFC2C072E8700FD360A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DFFB2C072E8700FD360A /* StartView.swift */; };
+		0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DFFB2C072E8700FD360A /* homepage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		0EAF1F522C075F4300D3CEFC /* conti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conti.swift; sourceTree = "<group>"; };
 		0EAF1F542C075F5500D3CEFC /* storico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storico.swift; sourceTree = "<group>"; };
 		0EAF1F562C075F8000D3CEFC /* impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = impostazioni.swift; sourceTree = "<group>"; };
-		0EC3DFFB2C072E8700FD360A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		0EC3DFFB2C072E8700FD360A /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		0C4DC0212C0704E600A28B9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0EC3DFFB2C072E8700FD360A /* StartView.swift */,
+				0EC3DFFB2C072E8700FD360A /* homepage.swift */,
 				0EAF1F522C075F4300D3CEFC /* conti.swift */,
 				0EAF1F542C075F5500D3CEFC /* storico.swift */,
 				0EAF1F562C075F8000D3CEFC /* impostazioni.swift */,
@@ -237,7 +237,7 @@
 				0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */,
 				0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */,
 				0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */,
-				0EC3DFFC2C072E8700FD360A /* StartView.swift in Sources */,
+				0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */,
 				0EAF1F532C075F4300D3CEFC /* conti.swift in Sources */,
 				0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */,
 				0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */,

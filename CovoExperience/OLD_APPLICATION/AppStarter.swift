@@ -25,7 +25,7 @@ struct AppStarter: App {
 
     var body: some Scene {
         WindowGroup {
-            StartView()
+            homepage()
         }
         .modelContainer(sharedModelContainer)
     }

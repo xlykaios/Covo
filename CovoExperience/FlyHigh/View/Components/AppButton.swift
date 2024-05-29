@@ -1,23 +1,18 @@
-//
-//  AppButton.swift
-//  FlyHigh
-//
-//  Created by Antonio Giordano on 28/05/24.
-//
-
 import SwiftUI
 
-struct AppButton: View {
+struct AppButton<Destination>: View where Destination: View {
     var text: String
     var icon: String
-    var destinationPage: String
+    let destination: Destination
+    
+    init(text: String, icon: String, @ViewBuilder destination: @escaping () -> Destination) {
+        self.text = text
+        self.icon = icon
+        self.destination = destination()
+    }
     
     var body: some View {
-        Button(action: {
-            //TODO: Qui andrà inserita la funzione di move ad una view indicata da "destinationPage"
-            
-        }) {
-            //MARK: Creo un posizionamento verticale tra quadrato (dati presi da figma e tweakati) e il testo
+        NavigationLink(destination: destination) {
             VStack(spacing: 3) {
                 ZStack {
                     Rectangle()
@@ -34,21 +29,19 @@ struct AppButton: View {
                     Image(systemName: icon)
                         .scaleEffect(CGSize(width: 2.3, height: 2.3))
                         .frame(width: 20, height: 20)
+                        .tint(.white)
                 }
                 Text(text)
                     .font(Font.custom("SF Pro Display", size: 15))
                     .foregroundColor(.white)
             }
+            .buttonStyle(PlainButtonStyle())
             .frame(width: 87, height: 104)
         }
-        
-        //MARK: Utilizzo plainbuttonstyle perchè altrimenti i bottoni di iOS hanno sfondo blu chiavicone
-        
-        .buttonStyle(PlainButtonStyle())
     }
-    }
-
-
-#Preview {
-    AppButton(text: "Info",icon: "gear", destinationPage: "pisello")
 }
+//#Preview {
+//    AppButton(text: "Info", icon: "gear") {
+//        Text("Destination View")
+//    }
+//}
