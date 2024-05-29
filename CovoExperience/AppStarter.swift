@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct CovoExperienceApp: App {
+struct AppStarter: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             //Item.self,
@@ -25,7 +25,7 @@ struct CovoExperienceApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
         }
         .modelContainer(sharedModelContainer)
     }

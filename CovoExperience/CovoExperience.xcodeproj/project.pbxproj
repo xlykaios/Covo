@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1FDC0A2C04D02C00B9211A /* CovoExperienceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC092C04D02C00B9211A /* CovoExperienceApp.swift */; };
+		0C1FDC0A2C04D02C00B9211A /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC092C04D02C00B9211A /* AppStarter.swift */; };
 		0C1FDC0C2C04D02C00B9211A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0B2C04D02C00B9211A /* ContentView.swift */; };
 		0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0D2C04D02C00B9211A /* Item.swift */; };
 		0C1FDC102C04D02D00B9211A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */; };
 		0C1FDC132C04D02D00B9211A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */; };
+		0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC0112C07027A00A28B9F /* AppButton.swift */; };
+		0C4DC01F2C07027A00A28B9F /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC0162C07027A00A28B9F /* StartView.swift */; };
+		0C4DC0202C07027A00A28B9F /* SwitchToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */; };
 		0E00D7612C04D4E8001480AC /* ContiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E00D7602C04D4E8001480AC /* ContiViewModel.swift */; };
 		0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E00D7622C04D510001480AC /* AggiungiSerataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C1FDC062C04D02C00B9211A /* CovoExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovoExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C1FDC092C04D02C00B9211A /* CovoExperienceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovoExperienceApp.swift; sourceTree = "<group>"; };
+		0C1FDC092C04D02C00B9211A /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
 		0C1FDC0B2C04D02C00B9211A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C1FDC0D2C04D02C00B9211A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C4DC0112C07027A00A28B9F /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		0C4DC0162C07027A00A28B9F /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchToggle.swift; sourceTree = "<group>"; };
 		0E00D7602C04D4E8001480AC /* ContiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiViewModel.swift; sourceTree = "<group>"; };
 		0E00D7622C04D510001480AC /* AggiungiSerataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggiungiSerataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,7 +47,11 @@
 		0C1FDBFD2C04D02C00B9211A = {
 			isa = PBXGroup;
 			children = (
-				0C1FDC082C04D02C00B9211A /* CovoExperience */,
+				0C1FDC092C04D02C00B9211A /* AppStarter.swift */,
+				0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */,
+				0C1FDC112C04D02D00B9211A /* Preview Content */,
+				0C4DC0182C07027A00A28B9F /* FlyHigh */,
+				0C1FDC082C04D02C00B9211A /* OLD_APPLICATION */,
 				0C1FDC072C04D02C00B9211A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,17 +64,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C1FDC082C04D02C00B9211A /* CovoExperience */ = {
+		0C1FDC082C04D02C00B9211A /* OLD_APPLICATION */ = {
 			isa = PBXGroup;
 			children = (
 				0E00D75D2C04D2B8001480AC /* Model */,
 				0E00D75E2C04D2C5001480AC /* View */,
 				0E00D75F2C04D2CA001480AC /* ViewModel */,
-				0C1FDC092C04D02C00B9211A /* CovoExperienceApp.swift */,
-				0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */,
-				0C1FDC112C04D02D00B9211A /* Preview Content */,
 			);
-			path = CovoExperience;
+			path = OLD_APPLICATION;
 			sourceTree = "<group>";
 		};
 		0C1FDC112C04D02D00B9211A /* Preview Content */ = {
@@ -75,10 +82,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0E00D75D2C04D2B8001480AC /* Model */ = {
+		0C4DC0182C07027A00A28B9F /* FlyHigh */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DC0242C07056E00A28B9F /* SwiftDataDirectory */,
+				0C4DC0232C0704F100A28B9F /* ViewModel */,
+				0C4DC0222C0704EC00A28B9F /* Model */,
+				0C4DC0212C0704E600A28B9F /* View */,
+			);
+			path = FlyHigh;
+			sourceTree = "<group>";
+		};
+		0C4DC0212C0704E600A28B9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DC0112C07027A00A28B9F /* AppButton.swift */,
+				0C4DC0162C07027A00A28B9F /* StartView.swift */,
+				0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C4DC0222C0704EC00A28B9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C4DC0232C0704F100A28B9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C4DC0242C07056E00A28B9F /* SwiftDataDirectory */ = {
 			isa = PBXGroup;
 			children = (
 				0C1FDC0D2C04D02C00B9211A /* Item.swift */,
+			);
+			path = SwiftDataDirectory;
+			sourceTree = "<group>";
+		};
+		0E00D75D2C04D2B8001480AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,10 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E00D7612C04D4E8001480AC /* ContiViewModel.swift in Sources */,
+				0C4DC01F2C07027A00A28B9F /* StartView.swift in Sources */,
 				0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */,
 				0C1FDC0C2C04D02C00B9211A /* ContentView.swift in Sources */,
+				0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */,
 				0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */,
-				0C1FDC0A2C04D02C00B9211A /* CovoExperienceApp.swift in Sources */,
+				0C1FDC0A2C04D02C00B9211A /* AppStarter.swift in Sources */,
+				0C4DC0202C07027A00A28B9F /* SwitchToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CovoExperience/Preview Content\"";
-				DEVELOPMENT_TEAM = 29TYU3PWKC;
+				DEVELOPMENT_TEAM = SXPGP5FB93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -338,7 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CovoExperience/Preview Content\"";
-				DEVELOPMENT_TEAM = 29TYU3PWKC;
+				DEVELOPMENT_TEAM = SXPGP5FB93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
