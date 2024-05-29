@@ -96,9 +96,8 @@
 		0C4DC0212C0704E600A28B9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0C4DC0112C07027A00A28B9F /* AppButton.swift */,
+				0C4DC0252C07074E00A28B9F /* Components */,
 				0C4DC0162C07027A00A28B9F /* StartView.swift */,
-				0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +122,15 @@
 				0C1FDC0D2C04D02C00B9211A /* Item.swift */,
 			);
 			path = SwiftDataDirectory;
+			sourceTree = "<group>";
+		};
+		0C4DC0252C07074E00A28B9F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DC0112C07027A00A28B9F /* AppButton.swift */,
+				0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		0E00D75D2C04D2B8001480AC /* Model */ = {

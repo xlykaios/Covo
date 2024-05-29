@@ -14,9 +14,10 @@ struct AppButton: View {
     
     var body: some View {
         Button(action: {
-            // Azione del bottone
+            //TODO: Qui andrà inserita la funzione di move ad una view indicata da "destinationPage"
             
         }) {
+            //MARK: Creo un posizionamento verticale tra quadrato (dati presi da figma e tweakati) e il testo
             VStack(spacing: 3) {
                 ZStack {
                     Rectangle()
@@ -39,7 +40,11 @@ struct AppButton: View {
                     .foregroundColor(.white)
             }
             .frame(width: 87, height: 104)
-        } .buttonStyle(PlainButtonStyle())
+        }
+        
+        //MARK: Utilizzo plainbuttonstyle perchè altrimenti i bottoni di iOS hanno sfondo blu chiavicone
+        
+        .buttonStyle(PlainButtonStyle())
     }
     }
 
