@@ -1,8 +1,8 @@
 //
-//  StartView.swift
-//  FlyHigh
+//  Homepage.swift
+//  CovoExperience
 //
-//  Created by Antonio Giordano on 28/05/24.
+//  Created by Edoardo Bertilaccio on 28/05/24.
 //
 
 import SwiftUI
@@ -10,31 +10,35 @@ import SwiftUI
 struct StartView: View {
     @State var isOn = false
     var body: some View {
-        ZStack {
-            Image("Sfondo")
-                .brightness(-0.15)
-            VStack(alignment: .center) {
-                Text("Fly High")
-                    .bold()
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .offset(y:-320)
+        GeometryReader(content: { geometry in
+            ZStack {
+                Image("Sfondo")
+                    .brightness(-0.08)
+                    .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                    .position(x: geometry.size.width/2, y: geometry.size.width*1)
+                VStack(content:{
+                    Text("Fly High bro")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.white)
+                    Text("Slida verso l'alto per sborrare")
+                        .foregroundColor(.white)
+                })
+                .position(x: geometry.size.width/2, y:geometry.size.width/2.5)
+                HStack(spacing: geometry.size.width/30, content: {
+                    AppButton(text: "Conti", icon: "list.bullet.clipboard", destinationPage: "conti")
+                    AppButton(text: "Storico", icon: "tray.full", destinationPage: "storico")
+                    AppButton(text: "Settings", icon: "gearshape", destinationPage: "impostazioni")
+                })
+                .position(x: geometry.size.width/2, y: geometry.size.width*0.78)
             }
-            HStack{
-                AppButton(text: "Conti", icon: "list.bullet.clipboard", destinationPage: "popi")
-                AppButton(text: "Storico", icon: "tray.full", destinationPage: "popi")
-                AppButton(text: "Settings", icon: "gearshape", destinationPage: "settingsPageView")
-            }.offset(CGSize(width: 0.0, height: -170.0))
-            
-            
             Toggle("", isOn: $isOn)
                 .toggleStyle(CustomToggleStyle())
-                .offset(y: 200)
-            
-        }
+                .position(x: geometry.size.width/2, y: geometry.size.width*1.7)
+        })
     }
+    
 }
-
 
 #Preview {
     StartView()

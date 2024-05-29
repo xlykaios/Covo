@@ -23,12 +23,12 @@ struct CustomToggleStyle:ToggleStyle{
     func makeBody(configuration: Configuration) -> some View {
         let isOn = configuration.isOn
         return ZStack{
-                Image("Sfdondo")
+                Image("cannetta")
                     .resizable()
                     .frame(width: 60, height: 250)
             
             //MARK: Nota la possibilità di utilizzare un IF CASE all'interno del costrutto con il formato (valore: *boolean* ifTrue ? ifFalse) , questo ci permette di effettuare cambiamenti nella view in base a range di valori, o in questo caso, alla pressione di un bottone, in questo caso al cambiamento del boolean l'immagine si muoverà da posizione -300 a 0 tramite animazione (vedi sotto)
-                    .offset(y: isOn ? -300:0)
+                    .offset(y: isOn ? 300:0)
                     .overlay(alignment: .leading) {
                                        ZStack {
                                            Image(systemName: "leaf.fill")
