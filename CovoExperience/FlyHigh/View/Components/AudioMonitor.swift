@@ -2,10 +2,10 @@ import AVFoundation
 
 class AudioMonitor: NSObject, AVAudioRecorderDelegate {
     private var audioRecorder: AVAudioRecorder?
-    private var levelTimer: Timer?
+    var levelTimer: Timer?
+    var noiseLevel: Float = 0
     private var threshold: Float
-    private(set) var isAboveThreshold = false
-
+    
     init(threshold: Float) {
         self.threshold = threshold
         super.init()
@@ -43,16 +43,19 @@ class AudioMonitor: NSObject, AVAudioRecorderDelegate {
         audioRecorder?.updateMeters()
         
         if let averagePower = audioRecorder?.averagePower(forChannel: 0) {
+            noiseLevel = averagePower
             if averagePower > threshold {
-                isAboveThreshold = true
-            } else {
-                isAboveThreshold = false
+                noiseLevel = min(noiseLevel + 1, 100)
             }
         }
     }
 
-    deinit {
+    func stopMonitoring() {
         audioRecorder?.stop()
         levelTimer?.invalidate()
+    }
+
+    deinit {
+        stopMonitoring()
     }
 }

@@ -19,6 +19,7 @@
 		0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F542C075F5500D3CEFC /* storico.swift */; };
 		0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F562C075F8000D3CEFC /* impostazioni.swift */; };
 		0EBED6422C08AB0B00F4E1D4 /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */; };
+		0EBED64A2C08BC5C00F4E1D4 /* SwitchToggleAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBED6492C08BC5C00F4E1D4 /* SwitchToggleAudio.swift */; };
 		0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DFFB2C072E8700FD360A /* homepage.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		0EAF1F542C075F5500D3CEFC /* storico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storico.swift; sourceTree = "<group>"; };
 		0EAF1F562C075F8000D3CEFC /* impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = impostazioni.swift; sourceTree = "<group>"; };
 		0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
+		0EBED6492C08BC5C00F4E1D4 /* SwitchToggleAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchToggleAudio.swift; sourceTree = "<group>"; };
 		0EC3DFFB2C072E8700FD360A /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 				0C4DC0112C07027A00A28B9F /* AppButton.swift */,
 				0C4DC0172C07027A00A28B9F /* SwitchToggle.swift */,
 				0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */,
+				0EBED6492C08BC5C00F4E1D4 /* SwitchToggleAudio.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */,
 				0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */,
 				0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */,
+				0EBED64A2C08BC5C00F4E1D4 /* SwitchToggleAudio.swift in Sources */,
 				0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */,
 				0EAF1F532C075F4300D3CEFC /* conti.swift in Sources */,
 				0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */,

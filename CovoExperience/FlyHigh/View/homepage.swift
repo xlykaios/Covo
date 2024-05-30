@@ -1,17 +1,19 @@
 import SwiftUI
 
 struct homepage: View {
-    @State var isOn = false
+    @State private var isOn = false
+    @State private var noiseLevel: Float = 0.0
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
                 ZStack {
                     Image("Sfondo")
+                        .resizable()
+                        .scaledToFill()
                         .opacity(0.8)
                         .contrast(1.5)
-                        .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                        .position(x: geometry.size.width / 2, y: geometry.size.width)
+                        .ignoresSafeArea()
                     
                     VStack {
                         VStack {
@@ -25,13 +27,9 @@ struct homepage: View {
                             Text("Accendila per bene tirando come un dannato")
                                 .foregroundColor(.white)
                         }
-                        .position(x: geometry.size.width / 2, y: geometry.size.width / 1.2)
-                        
-                        
-                        
+                        .padding()
                         
                         Spacer().frame(height: 10)
-                        
                         
                         HStack(spacing: geometry.size.width / 30) {
                             NavigationLink(destination: conti()) {
@@ -52,13 +50,20 @@ struct homepage: View {
                                 }
                             }
                         }
-                        .position(x: geometry.size.width / 2, y: geometry.size.width / 3)
+                        .padding()
+                        
+                        Spacer().frame(height: 10)
+                        
+                        SwitchToggleAudio(noiseLevel: $noiseLevel)
+                            .position(x:geometry.size.width/2, y:geometry.size.height/2)
+                        
+                        Text("Noise Level: \(noiseLevel, specifier: "%.1f")")
+                            .foregroundColor(.white)
+                            .padding()
+                        
+                        Spacer().frame(height: 0)
                     }
-                    .position(x: geometry.size.width / 2, y: geometry.size.width / 2)
-                    SwitchToggle()
-                        .position(x:geometry.size.width/1.9, y:geometry.size.height/1.8)
-                    
-                    Spacer().frame(height: 0)
+                    .padding()
                 }
             }
         }
