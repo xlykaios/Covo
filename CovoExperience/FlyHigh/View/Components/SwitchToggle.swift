@@ -4,9 +4,9 @@ struct SwitchToggle: View {
     @State private var sliderValue: CGFloat = 0.0
     private let maxHeight: CGFloat // Altezza massima a cui l'immagine può arrivare
     private let maxOffsetX: CGFloat // Posizione massima sull'asse X a cui l'immagine può arrivare
-    private let sensitivity: CGFloat = 0.5 // Modifica la sensibilità qui, più è basso più il movimento è lento
+    private let sensitivity: CGFloat = 0.35 // Modifica la sensibilità qui, più è basso più il movimento è lento
     
-    init(maxHeight: CGFloat = 300.0, maxOffsetX: CGFloat = 0.0) { // Modifica questi valori per cambiare la posizione finale
+    init(maxHeight: CGFloat = 250.0, maxOffsetX: CGFloat = 5.0) { // Modifica questi valori per cambiare la posizione finale
         self.maxHeight = maxHeight
         self.maxOffsetX = maxOffsetX
     }
@@ -18,6 +18,7 @@ struct SwitchToggle: View {
                 Image("cannetta")
                     .resizable()
                     .frame(width: 60, height: 250)
+                    .rotationEffect(.degrees(-5))
                     .offset(x: maxOffsetX * (sliderValue / maxHeight), y: maxHeight - sliderValue)
                     .scaleEffect(1 + sliderValue / maxHeight) // Scala l'immagine in base al valore dello slider
                     .animation(.interpolatingSpring(stiffness: 100, damping: 10), value: sliderValue)
@@ -31,12 +32,12 @@ struct SwitchToggle: View {
                     }
             )
         }
-        .frame(height: 400)
+        .frame(height: 490)
         .background(Color.clear) // Rimuove lo sfondo grigio
-        .offset(y: 100)
+        .offset(y: 50)
     }
 }
 
 #Preview {
-    SwitchToggle(maxHeight: 300.0, maxOffsetX: 50.0)
+    SwitchToggle()
 }

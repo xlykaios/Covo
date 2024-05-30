@@ -20,9 +20,9 @@ struct homepage: View {
                                 .bold()
                                 .foregroundColor(.white)
                                 .padding()
-                            Text("Slida verso l'alto per sborrare")
+                            Text("Tira su la canna verso l'alto")
                                 .foregroundColor(.white)
-                            Text("Mi raccomando... punta bene")
+                            Text("Accendila per bene tirando come un dannato")
                                 .foregroundColor(.white)
                         }
                         .position(x: geometry.size.width / 2, y: geometry.size.width / 1.2)
@@ -56,10 +56,9 @@ struct homepage: View {
                     }
                     .position(x: geometry.size.width / 2, y: geometry.size.width / 2)
                     SwitchToggle()
-                        .frame(height: 300)
+                        .position(x:geometry.size.width/1.9, y:geometry.size.height/1.8)
                     
                     Spacer().frame(height: 0)
-                    
                 }
             }
         }
