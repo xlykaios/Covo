@@ -42,11 +42,14 @@ struct SwitchToggleAudio: UIViewControllerRepresentable {
             audioMonitor = AudioMonitor(threshold: -30.0)
             parent.noiseLevel = 0
             audioMonitor?.noiseLevel = 0
-            audioMonitor?.levelTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                self.parent.noiseLevel = self.audioMonitor?.noiseLevel ?? 0
-                print("Noise level: \(self.parent.noiseLevel)")
-                if self.parent.noiseLevel >= 100 {
-                    self.stopMonitoring()
+            audioMonitor?.levelTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.parent.noiseLevel = self.audioMonitor?.noiseLevel ?? 0
+                    print("Noise level: \(self.parent.noiseLevel)")
+                    if self.parent.noiseLevel >= 100 {
+                        self.stopMonitoring()
+                    }
                 }
             }
         }

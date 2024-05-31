@@ -21,15 +21,13 @@ struct homepage: View {
                                 .font(.largeTitle)
                                 .bold()
                                 .foregroundColor(.white)
-                                .padding()
+                                .padding(geometry.size.height / 20)
                             Text("Tira su la canna verso l'alto")
                                 .foregroundColor(.white)
                             Text("Accendila per bene tirando come un dannato")
                                 .foregroundColor(.white)
                         }
-                        .padding()
-                        
-                        Spacer().frame(height: 10)
+                        .padding(geometry.size.height / 30)
                         
                         HStack(spacing: geometry.size.width / 30) {
                             NavigationLink(destination: conti()) {
@@ -52,14 +50,12 @@ struct homepage: View {
                         }
                         .padding()
                         
-                        Spacer().frame(height: 10)
-                        
-                        SwitchToggleAudio(noiseLevel: $noiseLevel)
-                            .position(x:geometry.size.width/2, y:geometry.size.height/2)
-                        
-                        Text("Noise Level: \(noiseLevel, specifier: "%.1f")")
+                        SwitchToggle(noiseLevel: $noiseLevel)
+                            .position(x:geometry.size.width/2.6, y:geometry.size.height/2.3)
+                            .rotationEffect(.degrees(-5), anchor: .center)
+                        /* Debug audio */                        Text("Noise Level: \(noiseLevel, specifier: "%.1f")")
                             .foregroundColor(.white)
-                            .padding()
+                            .padding(30)
                         
                         Spacer().frame(height: 0)
                     }

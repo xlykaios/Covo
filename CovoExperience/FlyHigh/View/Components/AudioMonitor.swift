@@ -40,12 +40,17 @@ class AudioMonitor: NSObject, AVAudioRecorderDelegate {
     }
 
     @objc private func checkAudioLevel() {
-        audioRecorder?.updateMeters()
-        
-        if let averagePower = audioRecorder?.averagePower(forChannel: 0) {
-            noiseLevel = averagePower
-            if averagePower > threshold {
-                noiseLevel = min(noiseLevel + 1, 100)
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return }
+            self.audioRecorder?.updateMeters()
+            
+            if let averagePower = self.audioRecorder?.averagePower(forChannel: 0) {
+                DispatchQueue.main.async {
+                    self.noiseLevel = averagePower
+                    if averagePower > self.threshold {
+                        self.noiseLevel = min(self.noiseLevel + 1, 100)
+                    }
+                }
             }
         }
     }
@@ -53,6 +58,7 @@ class AudioMonitor: NSObject, AVAudioRecorderDelegate {
     func stopMonitoring() {
         audioRecorder?.stop()
         levelTimer?.invalidate()
+        levelTimer = nil
     }
 
     deinit {
