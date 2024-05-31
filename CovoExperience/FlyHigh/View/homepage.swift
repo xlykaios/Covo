@@ -1,3 +1,9 @@
+//
+//  impostazioni.swift
+//  CovoExperience
+//
+//  Created by Edoardo Bertilaccio on 27/05/24.
+//
 import SwiftUI
 
 struct homepage: View {
@@ -14,7 +20,7 @@ struct homepage: View {
                         .opacity(0.8)
                         .contrast(1.5)
                         .ignoresSafeArea()
-                    
+                
                     VStack {
                         VStack {
                             Text("Fly High bro")
@@ -24,8 +30,10 @@ struct homepage: View {
                                 .padding(geometry.size.height / 20)
                             Text("Tira su la canna verso l'alto")
                                 .foregroundColor(.white)
+                                .frame(alignment: .center)
                             Text("Accendila per bene tirando come un dannato")
                                 .foregroundColor(.white)
+                                .frame(alignment: .center)
                         }
                         .padding(geometry.size.height / 30)
                         
@@ -51,7 +59,7 @@ struct homepage: View {
                         .padding()
                         
                         SwitchToggle(noiseLevel: $noiseLevel)
-                            .position(x:geometry.size.width/2.6, y:geometry.size.height/2.3)
+
                             .rotationEffect(.degrees(-5), anchor: .center)
                         /* Debug audio */                        Text("Noise Level: \(noiseLevel, specifier: "%.1f")")
                             .foregroundColor(.white)

@@ -1,3 +1,9 @@
+//
+//  impostazioni.swift
+//  CovoExperience
+//
+//  Created by Edoardo Bertilaccio on 26/05/24.
+//
 import SwiftUI
 import SwiftData
 
@@ -29,9 +35,10 @@ struct conti: View {
                     
                     .navigationTitle("Conti").foregroundColor(.white)
                     .navigationBarItems(
+                        
                         trailing: NavigationLink("Aggiungi Serata", destination: AggiungiSerataView(viewModel: viewModel))
-                            .foregroundColor(.white)
                     )
+                    
                     .tint(.white)
                     .foregroundColor(.white)
                 }
@@ -43,6 +50,7 @@ struct conti: View {
                         .position(x: geometry.size.width/2, y: geometry.size.width*0.7)
                 )
             }
+            .accentColor(.white)
             .tint(.white)
         })
     }

@@ -36,12 +36,12 @@ struct AppButton<Destination>: View where Destination: View {
                     .foregroundColor(.white)
             }
             .buttonStyle(PlainButtonStyle())
-            .frame(width: 87, height: 104)
+            .frame(width: 120, height: 104)
         }
     }
 }
-//#Preview {
-//    AppButton(text: "Info", icon: "gear") {
-//        Text("Destination View")
-//    }
-//}
+#Preview {
+    AppButton(text: "TESTTTTTTTTTTTT", icon: "gear") {
+        Text("Destination View")
+    }
+}
