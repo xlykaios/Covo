@@ -22,7 +22,7 @@ struct AggiungiSerataView: View {
                     .opacity(0.45)
                     .contrast(1.4)
                     .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                    .position(x: geometry.size.width/2, y: geometry.size.width*0.7)
+                    .position(x: geometry.size.width/2, y: geometry.size.width*0.85)
                 Form {
                     DatePicker("Data", selection: $data, displayedComponents: .date)
                     
@@ -52,7 +52,7 @@ struct AggiungiSerataView: View {
                                     soldiPersona = ""
                                 }
                             }
-                            .foregroundColor(.white)
+                            
                         }
                         
                     }
@@ -67,8 +67,8 @@ struct AggiungiSerataView: View {
                 .scrollContentBackground(.hidden)
                 .navigationTitle("Aggiungi Serata")
                 .navigationBarItems(trailing: EditButton())
-                .tint(.white)
-                
+                .background(.opacity(0))
+                .contrast(1)
             }
                    
             )

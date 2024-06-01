@@ -12,7 +12,7 @@ struct homepage: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationView {
+            NavigationStack {
                 ZStack {
                     Image("Sfondo")
                         .resizable()
@@ -70,6 +70,8 @@ struct homepage: View {
                     .padding()
                 }
             }
+            .tint(.white)
+            .accentColor(.white)
         }
     }
 }
