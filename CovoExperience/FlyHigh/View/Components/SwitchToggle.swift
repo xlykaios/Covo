@@ -3,11 +3,13 @@ import AVFoundation
 
 struct SwitchToggle: UIViewControllerRepresentable {
     @Binding var noiseLevel: Float
-    @State private var fillVariable: Float = 0 // Variabile che si riempie in base al rumore captato
-    
+    @Binding var fillVariable: Float
+    @Binding var navigateToSession: Bool
+
     class Coordinator: NSObject, AVAudioRecorderDelegate {
         var parent: SwitchToggle
         var audioMonitor: AudioMonitor?
+        var imageView: UIImageView?
         
         init(_ parent: SwitchToggle) {
             self.parent = parent
@@ -42,7 +44,6 @@ struct SwitchToggle: UIViewControllerRepresentable {
             }
         }
         
-        // Inizia a monitorare l'audio
         private func startMonitoring() {
             audioMonitor = AudioMonitor(threshold: -10)
             parent.noiseLevel = -80
@@ -51,24 +52,30 @@ struct SwitchToggle: UIViewControllerRepresentable {
                 guard let self = self else { return }
                 self.parent.noiseLevel = self.audioMonitor?.noiseLevel ?? 0
                 
-                if self.parent.noiseLevel >= -10 {
-                    // Incrementa la variabile se il rumore captato è maggiore o uguale a -10 decibel
+                if self.parent.noiseLevel >= -20 {
                     self.parent.fillVariable = min(self.parent.fillVariable + 0.5, 100)
                 } else {
-                    // Decrementa la variabile se il rumore captato è minore di -10 decibel
                     self.parent.fillVariable = max(self.parent.fillVariable - 0.25, 0)
                 }
                 
                 if self.parent.fillVariable >= 100 {
                     self.stopMonitoring()
+                    DispatchQueue.main.async {
+                        self.parent.navigateToSession = true
+                        self.parent.fillVariable = 0 // Reset fillVariable
+                    }
                 }
             }
         }
         
-        // Ferma il monitoraggio dell'audio
         private func stopMonitoring() {
             audioMonitor?.stopMonitoring()
             audioMonitor = nil
+            if let imageView = imageView {
+                UIView.animate(withDuration: 0.3) {
+                    imageView.transform = .identity
+                }
+            }
         }
     }
     
@@ -79,16 +86,17 @@ struct SwitchToggle: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = UIViewController()
         let imageView = UIImageView(image: UIImage(named: "cannetta")) // Assumendo che "cannetta" sia l'immagine
+        context.coordinator.imageView = imageView
         imageView.isUserInteractionEnabled = true
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         viewController.view.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 70),  // Più stretto
-            imageView.heightAnchor.constraint(equalToConstant: 240),  // Più lungo
+            imageView.widthAnchor.constraint(equalToConstant: 70),
+            imageView.heightAnchor.constraint(equalToConstant: 240),
             imageView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor, constant: -8),
-            imageView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor, constant: 170)  // Posizionato in basso
+            imageView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor, constant: 170)
         ])
         
         let panGesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handlePanGesture(_:)))
@@ -100,6 +108,32 @@ struct SwitchToggle: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
+struct ContentView: View {
+    @State private var noiseLevel: Float = 0
+    @State private var fillVariable: Float = 0
+    @State private var navigateToSession = false
+    
+    var body: some View {
+        NavigationStack {
+            VStack {
+                Text("Livello di rumore: \(noiseLevel, specifier: "%.2f") dB")
+                    .font(.headline)
+                    .padding()
+                
+                ProgressView(value: fillVariable, total: 100)
+                    .padding()
+                
+                SwitchToggle(noiseLevel: $noiseLevel, fillVariable: $fillVariable, navigateToSession: $navigateToSession)
+                    .navigationDestination(isPresented: $navigateToSession) {
+                        FumataSession()
+                    }
+            }
+            .navigationTitle("Monitoraggio")
+        }
+    }
+}
+
+
 #Preview {
-    homepage()
+    ContentView()
 }

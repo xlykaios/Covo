@@ -1,10 +1,3 @@
-//
-//  CovoExperienceApp.swift
-//  CovoExperience
-//
-//  Created by Antonio Giordano on 27/05/24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,7 +5,7 @@ import SwiftData
 struct AppStarter: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            //Item.self,
+            Session.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -26,7 +19,7 @@ struct AppStarter: App {
     var body: some Scene {
         WindowGroup {
             homepage()
+                .modelContainer(sharedModelContainer)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C1FDC0A2C04D02C00B9211A /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC092C04D02C00B9211A /* AppStarter.swift */; };
-		0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0D2C04D02C00B9211A /* Item.swift */; };
+		0C1FDC0E2C04D02C00B9211A /* Conti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0D2C04D02C00B9211A /* Conti.swift */; };
 		0C1FDC102C04D02D00B9211A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */; };
 		0C1FDC132C04D02D00B9211A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */; };
 		0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DC0112C07027A00A28B9F /* AppButton.swift */; };
@@ -18,6 +18,10 @@
 		0EAF1F532C075F4300D3CEFC /* conti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F522C075F4300D3CEFC /* conti.swift */; };
 		0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F542C075F5500D3CEFC /* storico.swift */; };
 		0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1F562C075F8000D3CEFC /* impostazioni.swift */; };
+		0EB2767B2C0C96510082C2A3 /* FumataSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2767A2C0C96510082C2A3 /* FumataSession.swift */; };
+		0EB2767D2C0CE48B0082C2A3 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2767C2C0CE48B0082C2A3 /* test.swift */; };
+		0EB405992C0DDD0C00DA5A2E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB405982C0DDD0C00DA5A2E /* Session.swift */; };
+		0EB405A32C0DF21600DA5A2E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB405A22C0DF21600DA5A2E /* SessionManager.swift */; };
 		0EBED6422C08AB0B00F4E1D4 /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */; };
 		0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3DFFB2C072E8700FD360A /* homepage.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +29,7 @@
 /* Begin PBXFileReference section */
 		0C1FDC062C04D02C00B9211A /* CovoExperience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovoExperience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1FDC092C04D02C00B9211A /* AppStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarter.swift; sourceTree = "<group>"; };
-		0C1FDC0D2C04D02C00B9211A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0C1FDC0D2C04D02C00B9211A /* Conti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conti.swift; sourceTree = "<group>"; };
 		0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C1FDC122C04D02D00B9211A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C4DC0112C07027A00A28B9F /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
@@ -35,6 +39,10 @@
 		0EAF1F522C075F4300D3CEFC /* conti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conti.swift; sourceTree = "<group>"; };
 		0EAF1F542C075F5500D3CEFC /* storico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storico.swift; sourceTree = "<group>"; };
 		0EAF1F562C075F8000D3CEFC /* impostazioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = impostazioni.swift; sourceTree = "<group>"; };
+		0EB2767A2C0C96510082C2A3 /* FumataSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FumataSession.swift; sourceTree = "<group>"; };
+		0EB2767C2C0CE48B0082C2A3 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		0EB405982C0DDD0C00DA5A2E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Session.swift; path = FlyHigh/SwiftDataDirectory/Session.swift; sourceTree = SOURCE_ROOT; };
+		0EB405A22C0DF21600DA5A2E /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		0EBB8B322C093C4E00136644 /* CovoExperience-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CovoExperience-Info.plist"; sourceTree = "<group>"; };
 		0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		0EC3DFFB2C072E8700FD360A /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
@@ -56,7 +64,6 @@
 			children = (
 				0EBB8B322C093C4E00136644 /* CovoExperience-Info.plist */,
 				0C4DC0182C07027A00A28B9F /* FlyHigh */,
-				0C1FDC082C04D02C00B9211A /* OLD_APPLICATION */,
 				0C1FDC072C04D02C00B9211A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,18 +74,6 @@
 				0C1FDC062C04D02C00B9211A /* CovoExperience.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0C1FDC082C04D02C00B9211A /* OLD_APPLICATION */ = {
-			isa = PBXGroup;
-			children = (
-				0C1FDC092C04D02C00B9211A /* AppStarter.swift */,
-				0C1FDC112C04D02D00B9211A /* Preview Content */,
-				0E00D75D2C04D2B8001480AC /* Model */,
-				0E00D75E2C04D2C5001480AC /* View */,
-				0E00D75F2C04D2CA001480AC /* ViewModel */,
-			);
-			path = OLD_APPLICATION;
 			sourceTree = "<group>";
 		};
 		0C1FDC112C04D02D00B9211A /* Preview Content */ = {
@@ -92,6 +87,8 @@
 		0C4DC0182C07027A00A28B9F /* FlyHigh */ = {
 			isa = PBXGroup;
 			children = (
+				0C1FDC112C04D02D00B9211A /* Preview Content */,
+				0C1FDC092C04D02C00B9211A /* AppStarter.swift */,
 				0C1FDC0F2C04D02D00B9211A /* Assets.xcassets */,
 				0C4DC0242C07056E00A28B9F /* SwiftDataDirectory */,
 				0C4DC0232C0704F100A28B9F /* ViewModel */,
@@ -108,7 +105,9 @@
 				0EAF1F522C075F4300D3CEFC /* conti.swift */,
 				0EAF1F542C075F5500D3CEFC /* storico.swift */,
 				0EAF1F562C075F8000D3CEFC /* impostazioni.swift */,
+				0EB2767A2C0C96510082C2A3 /* FumataSession.swift */,
 				0C4DC0252C07074E00A28B9F /* Components */,
+				0EB2767C2C0CE48B0082C2A3 /* test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 			children = (
 				0E00D7602C04D4E8001480AC /* ContiViewModel.swift */,
 				0E00D7622C04D510001480AC /* AggiungiSerataView.swift */,
+				0EB405A22C0DF21600DA5A2E /* SessionManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,7 +132,8 @@
 		0C4DC0242C07056E00A28B9F /* SwiftDataDirectory */ = {
 			isa = PBXGroup;
 			children = (
-				0C1FDC0D2C04D02C00B9211A /* Item.swift */,
+				0C1FDC0D2C04D02C00B9211A /* Conti.swift */,
+				0EB405982C0DDD0C00DA5A2E /* Session.swift */,
 			);
 			path = SwiftDataDirectory;
 			sourceTree = "<group>";
@@ -145,27 +146,6 @@
 				0EBED6412C08AB0B00F4E1D4 /* AudioMonitor.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		0E00D75D2C04D2B8001480AC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0E00D75E2C04D2C5001480AC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0E00D75F2C04D2CA001480AC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,14 +218,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB405992C0DDD0C00DA5A2E /* Session.swift in Sources */,
 				0E00D7612C04D4E8001480AC /* ContiViewModel.swift in Sources */,
 				0EAF1F552C075F5500D3CEFC /* storico.swift in Sources */,
 				0EAF1F572C075F8000D3CEFC /* impostazioni.swift in Sources */,
+				0EB2767D2C0CE48B0082C2A3 /* test.swift in Sources */,
+				0EB2767B2C0C96510082C2A3 /* FumataSession.swift in Sources */,
 				0E00D7632C04D510001480AC /* AggiungiSerataView.swift in Sources */,
 				0EC3DFFC2C072E8700FD360A /* homepage.swift in Sources */,
+				0EB405A32C0DF21600DA5A2E /* SessionManager.swift in Sources */,
 				0EAF1F532C075F4300D3CEFC /* conti.swift in Sources */,
 				0C4DC01A2C07027A00A28B9F /* AppButton.swift in Sources */,
-				0C1FDC0E2C04D02C00B9211A /* Item.swift in Sources */,
+				0C1FDC0E2C04D02C00B9211A /* Conti.swift in Sources */,
 				0C1FDC0A2C04D02C00B9211A /* AppStarter.swift in Sources */,
 				0C4DC0202C07027A00A28B9F /* SwitchToggle.swift in Sources */,
 				0EBED6422C08AB0B00F4E1D4 /* AudioMonitor.swift in Sources */,
@@ -368,6 +352,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -381,7 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OLD_APPLICATION/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FlyHigh/Preview Content\"";
 				DEVELOPMENT_TEAM = 29TYU3PWKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -415,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OLD_APPLICATION/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FlyHigh\"";
 				DEVELOPMENT_TEAM = 29TYU3PWKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

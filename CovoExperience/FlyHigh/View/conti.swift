@@ -60,7 +60,7 @@ struct conti: View {
                     .opacity(0.45)
                     .contrast(1.4)
                     .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                    .position(x: geometry.size.width/2, y: geometry.size.width*0.7)
+                    .position(x: geometry.size.width/2, y: geometry.size.height/2)
                     .accentColor(.black)
             )
         }
